@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX4DOM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Atividade Prática Individual</h1>
+    <h2>1 Ordenação</h2>
+    <p>
+      Crie um script que preencha a tabela com valores. Depois crie outro script
+      que ordene os valores da tabela
+    </p>
+    <table id="t1">
+      <th>Valores</th>
+      <tr>
+        <td>00,00</td>
+      </tr>
+      <tr>
+        <td>00,00</td>
+      </tr>
+      <tr>
+        <td>00,00</td>
+      </tr>
+    </table>
+    <!-----------------Resposta do Exercício 1------------>
+  
+    <script>
+    
+    let valor1 = Math.random()*10
+    let valor2 = Math.random()*10
+    let valor3 = Math.random()*10
+
+     if(valor1 >= valor2){
+        if(valor1 >= valor3){
+          if(valor2>=valor3){
+            document.getElementsByTagName("td")[0].innerHTML = valor1
+            document.getElementsByTagName("td")[1].innerHTML = valor2
+            document.getElementsByTagName("td")[2].innerHTML = valor3
+          }
+          else{
+            document.getElementsByTagName("td")[0].innerHTML = valor1
+            document.getElementsByTagName("td")[1].innerHTML = valor3
+            document.getElementsByTagName("td")[2].innerHTML = valor2
+          }
+        }
+        else{
+            document.getElementsByTagName("td")[0].innerHTML = valor3
+            document.getElementsByTagName("td")[1].innerHTML = valor1
+            document.getElementsByTagName("td")[2].innerHTML = valor2
+        }
+     }else{
+        if(valor3 >= valor2){
+            document.getElementsByTagName("td")[0].innerHTML = valor3
+            document.getElementsByTagName("td")[1].innerHTML = valor2
+            document.getElementsByTagName("td")[2].innerHTML = valor1
+        }
+        else{
+          if(valor1<= valor3){
+            document.getElementsByTagName("td")[0].innerHTML = valor2
+            document.getElementsByTagName("td")[1].innerHTML = valor3
+            document.getElementsByTagName("td")[2].innerHTML = valor1
+          }
+          else{
+            document.getElementsByTagName("td")[0].innerHTML = valor2
+            document.getElementsByTagName("td")[1].innerHTML = valor1
+            document.getElementsByTagName("td")[2].innerHTML = valor3
+          }  
+        }
+     }
+
+    </script>
+       
+    <!---------------------------------------------------->
+    <h2>2 Cores</h2>
+    <p>
+      Crie um script que gere uma cor aleatória em rgb e a apresente em um li
+      dentro da lista abaixo, deve-se, também, criar um gradiente linear de
+      branco até esta cor como cor de fundo do li.
+    </p>
+    <ul id="lista-cores" style="list-style: none; padding: 0"></ul>
+
+    <!-----------------Resposta do Exercício 2------------>
+
+    
+    <!---------------------------------------------------->
+
+    <h2>3 Países</h2>
+    <p>
+      Crie um script que encontre o país com o maior nome e o apresente em uma
+      div azul abaixo da tabela, e risque o pais com o menor nome, colocando sua
+      letra em vermelha
+    </p>
+    <table id="t2">
+      <th>País</th>
+      <tr>
+        <td>Brasil</td>
+      </tr>
+      <tr>
+        <td>Honduras</td>
+      </tr>
+      <tr>
+        <td>Peru</td>
+      </tr>
+      <tr>
+        <td>Alemanha</td>
+      </tr>
+      <tr>
+        <td>China</td>
+      </tr>
+      <tr>
+        <td>Rússia</td>
+      </tr>
+      <tr>
+        <td>Itália</td>
+      </tr>
+      <tr>
+        <td>Indonésia</td>
+      </tr>
+      <tr>
+        <td>Espanha</td>
+      </tr>
+      <tr>
+        <td>Cazaquistão</td>
+      </tr>
+      <tr>
+        <td>Chile</td>
+      </tr>
+      <tr>
+        <td>Argentina</td>
+      </tr>
+      <tr>
+        <td>Croácia</td>
+      </tr>
+      <tr>
+        <td>Portugal</td>
+      </tr>
+      <tr>
+        <td>Venezuela</td>
+      </tr>
+      <tr>
+        <td>Costa do Marfim</td>
+      </tr>
+      <tr>
+        <td>Congo</td>
+      </tr>
+      <tr>
+        <td>México</td>
+      </tr>
+    </table>
+    <div id="paisMaior"></div>
+
+    <!-----------------Resposta do Exercício 3------------>
+
+    <script>
+
+      let maior = document.getElementById("paisMaior")
+
+      let brasil = document.getElementsByTagName("td")[3]
+      let fbrasil = brasil.innerHTML
+      let tbrasil = fbrasil.length
+
+      let honduras = document.getElementsByTagName("td")[4]
+      let fhonduras = honduras.innerHTML
+      let thonduras = fhonduras.length
+
+      let peru = document.getElementsByTagName("td")[5]
+      let fperu = peru.innerHTML
+      let tperu = fperu.length
+
+      let alemanha = document.getElementsByTagName("td")[6]
+      let falemanha = alemanha.innerHTML
+      let talemanha = falemanha.length
+
+      let china = document.getElementsByTagName("td")[7]
+      let fchina = china.innerHTML
+      let tchina = fchina.length
+
+      let russia = document.getElementsByTagName("td")[8]
+      let frussia = russia.innerHTML
+      let trussia = frussia.length
+
+      let italia = document.getElementsByTagName("td")[9]
+      let fitalia = italia.innerHTML
+      let titalia = fitalia.length
+
+      let indonesia = document.getElementsByTagName("td")[10]
+      let findonesia = indonesia.innerHTML
+      let tindonesia = findonesia.length
+
+      let espanha = document.getElementsByTagName("td")[11]
+      let fespanha = espanha.innerHTML
+      let tespanha = fespanha.length
+
+      let cazaquistao = document.getElementsByTagName("td")[12]
+      let fcazaquistao = cazaquistao.innerHTML
+      let tcazaquistao = fcazaquistao.length
+
+      let chile = document.getElementsByTagName("td")[13]
+      let fchile = chile.innerHTML
+      let tchile = fchile.length
+
+      let argentina = document.getElementsByTagName("td")[14]
+      let fargentina = argentina.innerHTML
+      let targentina = fargentina.length
+
+      let croacia = document.getElementsByTagName("td")[15]
+      let fcroacia = croacia.innerHTML
+      let tcroacia = fcroacia.length
+
+      let portugal = document.getElementsByTagName("td")[16]
+      let fportugal = portugal.innerHTML
+      let tportugal = fportugal.length
+
+      let venezuela = document.getElementsByTagName("td")[17]
+      let fvenezuela = venezuela.innerHTML
+      let tvenezuela = fvenezuela.length
+
+      let costaDoMarfin = document.getElementsByTagName("td")[18]
+      let fcostaDoMarfin = costaDoMarfin.innerHTML
+      let tcostaDoMarfin = fcostaDoMarfin.length
+
+      let congo = document.getElementsByTagName("td")[19]
+      let fcongo = congo.innerHTML
+      let tcongo = fcongo.length
+
+      let mexico = document.getElementsByTagName("td")[20]
+      let fmexico = mexico.innerHTML
+      let tmexico = fmexico.length
+
+      if(tbrasil > thonduras && tbrasil > tperu && tbrasil > talemanha && tbrasil > tchina && tbrasil > trussia && tbrasil > titalia && tbrasil > tindonesia && tbrasil > tespanha && tbrasil > tcazaquistao && tbrasil > tchile && tbrasil > targentina && tbrasil > tcroacia && tbrasil > tportugal && tbrasil > tvenezuela && tbrasil > tcostaDoMarfin && tbrasil > tcongo && tbrasil > tmexico){
+        maior.innerHTML = brasil
+      }else{
+        if(thonduras > tbrasil && thonduras > tperu && thonduras > talemanha && thonduras > tchina && thonduras > trussia && thonduras > titalia && thonduras > tindonesia && thonduras > tespanha && thonduras > tcazaquistao && thonduras > tchile && thonduras > targentina && thonduras > tcroacia && thonduras > tportugal && thonduras > tvenezuela && thonduras > tcostaDoMarfin && thonduras > tcongo && thonduras > tmexico){
+        maior.innerHTML = honduras
+      }else{
+        if(tperu > tbrasil && tperu > thonduras && tperu > talemanha && tperu > tchina && tperu > trussia && tperu > titalia && tperu > tindonesia && tperu > tespanha && tperu > tcazaquistao && tperu > tchile && tperu > targentina && tperu > tcroacia && tperu > tportugal && tperu > tvenezuela && tperu > tcostaDoMarfin && tperu > tcongo && tperu > tmexico){
+        maior.innerHTML = peru
+      }else{
+        if(talemanha > tbrasil && talemanha > tperu && talemanha > thunduras && talemanha > tchina && talemanha > trussia && talemanha > titalia && talemanha > tindonesia && talemanha > tespanha && talemanha > tcazaquistao && talemanha > tchile && talemanha > targentina && talemanha > tcroacia && talemanha > tportugal && talemanha > tvenezuela && talemanha > tcostaDoMarfin && talemanha > tcongo && talemanha > tmexico){
+        maior.innerHTML = alemanha
+      }else{
+        if(tchina > tbrasil && tchina > tperu && tchina > talemanha && tchina > thunduras && tchina > trussia && tchina > titalia && tchina > tindonesia && tchina > tespanha && tchina > tcazaquistao && tchina > tchile && tchina > targentina && tchina > tcroacia && tchina > tportugal && tchina > tvenezuela && tchina > tcostaDoMarfin && tchina > tcongo && tchina > tmexico){
+        maior.innerHTML = china
+      }else{
+        if(trussia > tbrasil && trussia > tperu && trussia > talemanha && trussia > tchina && trussia > thonduras && trussia > titalia && trussia > tindonesia && trussia > tespanha && trussia > tcazaquistao && trussia > tchile && trussia > targentina && trussia > tcroacia && trussia > tportugal && trussia > tvenezuela && trussia > tcostaDoMarfin && trussia > tcongo && trussia > tmexico){
+        maior.innerHTML = russia
+      }else{
+        if(tiatlia > tbrasil && tiatlia > tperu && tiatlia > talemanha && tiatlia > thunduras && tiatlia > trussia && tiatlia > tchina && tiatlia > tindonesia && tiatlia > tespanha && tiatlia > tcazaquistao && tiatlia > tchile && tiatlia > targentina && tiatlia > tcroacia && tiatlia > tportugal && tiatlia > tvenezuela && tiatlia > tcostaDoMarfin && tiatlia > tcongo && tiatlia > tmexico){
+        maior.innerHTML = iatlia
+      }else{
+        if(tindonesia > tbrasil && tindonesia > tperu && tindonesia > talemanha && tindonesia > thunduras && tindonesia > trussia && tindonesia > titalia && tindonesia > tchina && tindonesia > tespanha && tindonesia > tcazaquistao && tindonesia > tchile && tindonesia > targentina && tindonesia > tcroacia && tindonesia > tportugal && tindonesia > tvenezuela && tindonesia > tcostaDoMarfin && tindonesia > tcongo && tindonesia > tmexico){
+        maior.innerHTML = indtindonesia
+      }else{
+        if(tespanha > tbrasil && tespanha > tperu && tespanha > talemanha && tespanha > thunduras && tespanha > trussia && tespanha > titalia && tespanha > tindonesia && tespanha > tchina && tespanha > tcazaquistao && tespanha > tchile && tespanha > targentina && tespanha > tcroacia && tespanha > tportugal && tespanha > tvenezuela && tespanha > tcostaDoMarfin && tespanha > tcongo && tespanha > tmexico){
+        maior.innerHTML = espanha
+      }else{
+        if(tcazaquistao > tbrasil && tcazaquistao > tperu && tcazaquistao > talemanha && tcazaquistao > thunduras && tcazaquistao > trussia && tcazaquistao > titalia && tcazaquistao > tindonesia && tcazaquistao > tespanha && tcazaquistao > tchina&& tcazaquistao > tchile && tcazaquistao > targentina && tcazaquistao > tcroacia && tcazaquistao > tportugal && tcazaquistao > tvenezuela && tcazaquistao > tcostaDoMarfin && tcazaquistao > tcongo && tcazaquistao > tmexico){
+        maior.innerHTML = cazaquistao
+      }else{
+        if(tchile > tbrasil && tchile > tperu && tchile > talemanha && tchile > thunduras && tchile > trussia && tchile > titalia && tchile > tindonesia && tchile > tespanha && tchile > tcazaquistao && tchile > tchina && tchile > targentina && tchile > tcroacia && tchile > tportugal && tchile > tvenezuela && tchile > tcostaDoMarfin && tchile > tcongo && tchile > tmexico){
+        maior.innerHTML = chile
+      }else{
+        if(targentina > tbrasil && targentina > tperu && targentina > talemanha && targentina > thunduras && targentina > trussia && targentina > titalia && targentina > tindonesia && targentina > tespanha && targentina > tcazaquistao && targentina > tchile && targentina > tchina && targentina > tcroacia && targentina > tportugal && targentina > tvenezuela && targentina > tcostaDoMarfin && targentina > tcongo && targentina > tmexico){
+        maior.innerHTML = argentina
+      }else{
+        if(tcroacia > tbrasil && tcroacia > tperu && tcroacia > talemanha && tcroacia > thunduras && tcroacia > trussia && tcroacia > titalia && tcroacia > tindonesia && tcroacia > tespanha && tcroacia > tcazaquistao && tcroacia > tchile && tcroacia > targentina && tcroacia > tchina && tcroacia > tportugal && tcroacia > tvenezuela && tcroacia > tcostaDoMarfin && tcroacia > tcongo && tcroacia > tmexico){
+        maior.innerHTML = croacia
+      }else{
+        if(tportugal > tbrasil && tportugal > tperu && tportugal > talemanha && tportugal > thunduras && tportugal > trussia && tportugal > titalia && tportugal > tindonesia && tportugal > tespanha && tportugal > tcazaquistao && tportugal > tchile && tportugal > targentina && tportugal > tcroacia && tportugal > tchina && tportugal > tvenezuela && tportugal > tcostaDoMarfin && tportugal > tcongo && tportugal > tmexico){
+        maior.innerHTML = portugal
+      }else{
+        if(tvenezuela > tbrasil && tvenezuela > tperu && tvenezuela > talemanha && tvenezuela > thunduras && tvenezuela > trussia && tvenezuela > titalia && tvenezuela > tindonesia && tvenezuela > tespanha && tvenezuela > tcazaquistao && tvenezuela > tchile && tvenezuela > targentina && tvenezuela > tcroacia && tvenezuela > tportugal && tvenezuela > tchina && tvenezuela > tcostaDoMarfin && tvenezuela > tcongo && tvenezuela > tmexico){
+        maior.innerHTML = venezuela
+      }else{
+        if(tcostaDoMarfin > tbrasil && tcostaDoMarfin > tperu && tcostaDoMarfin > talemanha && tcostaDoMarfin > thunduras && tcostaDoMarfin > trussia && tcostaDoMarfin > titalia && tcostaDoMarfin > tindonesia && tcostaDoMarfin > tespanha && tcostaDoMarfin > tcazaquistao && tcostaDoMarfin > tchile && tcostaDoMarfin > targentina && tcostaDoMarfin > tcroacia && tcostaDoMarfin > tportugal && tcostaDoMarfin > tvenezuela && tcostaDoMarfin > tchina && tcostaDoMarfin > tcongo && tcostaDoMarfin > tmexico){
+        maior.innerHTML = costcostaDoMarfin
+      }
+      }
+    }
+  }
+}
+      }
+    }}
+  }
+}
+      }
+    }
+  }
+}
+      }
+    }
+  
+      
+      </script>
+
+    <!---------------------------------------------------->
+
+    <h2>4 Autopreenchimento</h2>
+    <p>
+      Crie um script que escolha aleatóriamente um nome presente na lista de
+      nomes abaixo e preencha o campo de email com um email composto por
+      'nome@gmail.com'. Além disso, deve-se criar uma senha contendo as inicias
+      de todos os nomes da lista, a começar do último ao primeiro
+    </p>
+    <p>Lista de Nomes</p>
+    <ul id="lista-nomes">
+      <li>Vanessa</li>
+      <li>Luan</li>
+      <li>Carlos</li>
+      <li>Adalberto</li>
+      <li>Jefferson</li>
+      <li>Giovanna</li>
+      <li>Renata</li>
+      <li>Kleber</li>
+      <li>Tatiane</li>
+      <li>Ronaldo</li>
+      <li>Hugo</li>
+      <li>Nilson</li>
+      <li>Santos</li>
+      <li>Marcia</li>
+      <li>Leticia</li>
+      <li>Paula</li>
+      <li>Katarina</li>
+      <li>Artur</li>
+      <li>Henrique</li>
+      <li>Lilian</li>
+    </ul>
+    <form action="#" id="form-preenchimento">
+      <input type="email" placeholder="Email" />
+      <input type="text" placeholder="Senha" />
+    </form>
+
+    <!-----------------Resposta do Exercício 4------------>
+  
+    <script>
+      let senha = "lhakplmsnhrtkrgjaclv"
+      let lugarsenha = document.getElementsByTagName("input")[1]
+
+      let min = 0
+      let max = 20
+
+      function calculo(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min) + min);
+}
+
+      let escolha = document.getElementsByTagName("li")[calculo(min, max)]
+
+      let nome = escolha.textContent
+
+      lugarsenha.innerHTML = senha
+      console.log(lugarsenha.textContent)
+
+      let lugaremail = document.getElementsByTagName("input")[0]
+
+      lugaremail.innerHTML = nome + "@gmail.com"
+
+
+
+
+    </script>
+
+    <!---------------------------------------------------->
+  </body>
+</html>
